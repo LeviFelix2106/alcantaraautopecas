@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(180deg, #f1f1f1 0%, #e8e8e8 100%);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(45deg, #003d80,#035f3c, #03cc03);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+    box-shadow: inset 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.navbar {
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #003d80;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #003d80;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+    width: 100%;
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+.section.dark {
+    background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #003d80;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.servicos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.servico-card {
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    border-radius: 12px;
+    padding: 15px;
+    width: 300px; 
+    box-shadow: 4px 4px 12px rgba(227, 38, 38, 0.1), -4px -4px 15px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.15), -6px -6px 18px rgba(255, 255, 255, 0.6);
+}
+
+.servico-card h3 {
+    color: #003d80;
+    margin-bottom: 15px;
+}
+
+.servico-card p {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+.servico-card button {
+    background: linear-gradient(135deg, #e32626, #b30000);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+}
+
+.servico-card button:hover {
+    background: linear-gradient(135deg, #c60000, #800000);
+    transform: scale(1.05);
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+.map-preview {
+    background: url('src/Screenshot_4.png') center/cover no-repeat;
+    border-radius: 12px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.map-preview:hover {
+    transform: scale(1.02);
+}
+
+.map-preview span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+footer {
+    background: linear-gradient(to right, #003d80, #001f40);
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 40px;
+    font-size: 0.95em;
+    box-shadow: inset 0 3px 6px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .servicos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.logo {
+    max-width: 400px;
+    height: auto;   
+    margin-bottom: 15px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+    animation: fadeInDown 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* Animação suave de entrada */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsivo padrão */
+@media (max-width: 1024px) {
+    .container {
+      padding: 0 20px;
+    }
+  
+    .servicos-grid,
+    .galeria {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  
+    .navbar ul {
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      padding: 50px 15px;
+    }
+  
+    .logo {
+      max-width: 200px;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .servicos-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .servico-card {
+      width: 100%;
+      max-width: 90%;
+    }
+  
+    .servico-card button {
+      bottom: 15px;
+      width: 90%;
+    }
+  
+    .galeria {
+      grid-template-columns: 1fr;
+    }
+  
+    .map-preview {
+      height: 250px;
+    }
+  
+    footer {
+      font-size: 0.9em;
+      padding: 20px 10px;
+    }
+  }
+  .multi-carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: max-content;
+    margin: 40px auto 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  
+  .carousel-track {
+    display: flex;
+    width: min-content;
+    animation: slideCarousel 40s linear infinite;
+  }
+  
+  .carousel-track img {
+    width: 320px;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  /* Responsivo: 2 imagens */
+  @media (max-width: 1000px) {
+    .carousel-track img {
+      width: 45vw;
+      height: 180px;
+    }
+  }
+  
+  /* Responsivo: 1 imagem */
+  @media (max-width: 600px) {
+    .carousel-track img {
+      width: 90vw;
+      height: 160px;
+    }
+  }
+  
+  /* Animação de deslizamento infinito */
+  @keyframes slideCarousel {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  .multi-carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .multi-carousel button:hover {
+    background: rgba(0,0,0,0.7);
+  }
+  
+  .prev {
+    left: 15px;
+  }
+  
+  .next {
+    right: 15px;
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.8em;
+    }
+  
+    header p {
+      font-size: 1em;
+    }
+  
+    h2 {
+      font-size: 1.6em;
+    }
+  
+    .servico-card {
+      padding: 20px;
+    }
+  
+    .servico-card h3 {
+      font-size: 1.1em;
+    }
+  
+    .servico-card p {
+      font-size: 0.9em;
+    }
+  
+    .servico-card button {
+      font-size: 0.9em;
+      padding: 10px 20px;
+    }
+  }
+  
+  

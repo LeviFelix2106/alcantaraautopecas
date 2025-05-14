@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oficina Rápida Motors</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+  <header>
+    <img src="src/LOGO.png" alt="Logo Alcantara Auto Peças & Serviços" class="logo">
+    <p>Qualidade e confiança em mecânica e autopeças</p>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#empresa">Empresa</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#localizacao">Localização</a></li> <!-- Nova guia Localização -->
+    </ul>
+  </nav>
+
+  <section id="empresa" class="section sr">
+    <div class="container">
+      <h2>Quem Somos</h2>
+      <p>Há mais de 20 anos no mercado, oferecemos serviços rápidos e com garantia. Nossa equipe é formada por
+        profissionais certificados e apaixonados por carros.</p>
+    </div>
+  </section>
+
+  <section id="servicos" class="section dark sr">
+    <div class="container">
+      <h2>Serviços</h2>
+
+      <div class="servicos-grid">
+
+        <div class="servico-card">
+          <h3>Reboque 24 horas</h3>
+          <p>Atendimento de emergência rápido e seguro em qualquer horário.</p>
+          <button onclick="solicitarReboque('Reboque')">Solicite seu orçamento</button>
+        </div>
+        <div class="servico-card">
+          <h3>Venda de Peças</h3>
+          <p>Peças automotivas de alta qualidade para diversos modelos e marcas.</p>
+          <button onclick="solicitarOrcamento('Venda de Peças')">Solicite seu orçamento</button>
+        </div>
+
+        <div class="servico-card">
+          <h3>Mecânica e Elétrica em Geral</h3>
+          <p>Manutenção completa para seu veículo com equipamentos modernos.</p>
+          <button onclick="solicitarOrcamento('Mecânica e Elétrica')">Solicite seu orçamento</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="section">
+    <div class="container">
+      <div class="multi-carousel">
+        <div class="carousel-track">
+          <img src="src/img01.jpeg" alt="Imagem 1">
+          <img src="src/img02.jpeg" alt="Imagem 2">
+          <img src="src/img03.jpeg" alt="Imagem 3">
+          <img src="src/img04.jpeg" alt="Imagem 4">
+          <img src="src/img05.jpeg" alt="Imagem 5">
+          <img src="src/img06.jpeg" alt="Imagem 6">
+          <img src="src/img07.jpeg" alt="Imagem 7">
+          <img src="src/img08.jpeg" alt="Imagem 8">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+  <!-- Substituição da seção "Contato" por "Localização" -->
+  <section id="localizacao" class="section dark sr">
+    <div class="container">
+      <h2>Localização</h2>
+      <p>Clique no mapa abaixo para abrir no Google Maps:</p>
+
+      <a href="https://maps.app.goo.gl/BUUeBuwjvRiQ8r1j8" target="_blank" class="map-link">
+        <div class="map-preview">
+          <span>Clique para abrir no Google Maps</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+</body>
